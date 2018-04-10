@@ -18,13 +18,13 @@ var misPeces = [];
 
 function preload()
 {
-  cat=loadImage("assets/cat.png");
-  box=loadImage("assets/box.png");
-  catnip=loadImage("assets/catnip.png");
-  fish=loadImage("assets/fish.png");
-  mouse=loadImage("assets/mouse.png");
-  fondo=loadImage("assets/fondo.png");
-  dog=loadImage("assets/dog.png");
+  cat=loadImage("cat.png");
+  box=loadImage("box.png");
+  catnip=loadImage("catnip.png");
+  fish=loadImage("fish.png");
+  mouse=loadImage("mouse.png");
+  fondo=loadImage("fondo.png");
+  dog=loadImage("dog.png");
   
 }
 
