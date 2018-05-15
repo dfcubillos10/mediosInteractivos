@@ -69,8 +69,10 @@ function setup() {
   score=0;
   pause=0;
   //localizacion botones pantalla
- conversionX = width/600;
- conversionY = height/400;
+ //conversionX = width/600;
+ //conversionY = height/400;
+ conversionX = 1;
+ conversionY = 1;
 
  arribaX=80*conversionX;
  arribaY=280*conversionY;
