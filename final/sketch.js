@@ -75,7 +75,7 @@ function setup() {
   //createCanvas(2048, 1536);
   createCanvas(1024, 768);
   
-  velocidadOsos=10;
+  velocidadOsos=20;
   gameOver=0;
   score=0;
   pause=0;
@@ -123,7 +123,7 @@ function setup() {
  anchoRect=60*conversionX;
 
  selectedColor=0;
- traslacion =100;
+ traslacion =200;
   
   //creacion de especies
   unicornio = new Unicorn();
@@ -157,7 +157,7 @@ function draw() {
         mouseY > startY && mouseY < startY+altoRect) {
         figuraX=0;
  				figuraY=140*conversionY;
-        velocidadOsos=10;
+        velocidadOsos=20;
         score=0;
         gameOver=0;
       }
