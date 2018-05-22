@@ -118,7 +118,7 @@ function setup() {
  anchoRect=60*conversionX;
 
  selectedColor=0;
- traslacion =40;
+ traslacion =30;
   
   //creacion de especies
   unicornio = new Unicorn();
