@@ -289,22 +289,22 @@ function draw() {
       if (mouseX > xX-tamCirculo/2 && mouseX < xX + tamCirculo/2 &&
         mouseY > xY-tamCirculo/2 && mouseY < xY + tamCirculo/2) {
         selectedColor=0;
-		score=score+5;
+		score=score+25;
       }
       if (mouseX > yX-tamCirculo/2 && mouseX < yX + tamCirculo/2 &&
         mouseY > yY-tamCirculo/2 && mouseY < yY + tamCirculo/2) {
         selectedColor=1;
-		score=score+5;
+		score=score+25;
       }    
       if (mouseX > bX-tamCirculo/2 && mouseX < bX + tamCirculo/2 &&
         mouseY > bY-tamCirculo/2 && mouseY < bY + tamCirculo/2) {
         selectedColor=2;
-		score=score+5;
+		score=score+25;
       }
       if (mouseX > aX-tamCirculo/2 && mouseX < aX + tamCirculo/2 &&
         mouseY > aY-tamCirculo/2 && mouseY < aY + tamCirculo/2) {
         selectedColor=3;
-		score=score+5;
+		score=score+25;
       }
        //botones de menu (color)
       if (mouseX > startX && mouseX < startX + anchoRect &&
