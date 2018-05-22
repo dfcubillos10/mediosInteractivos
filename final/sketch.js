@@ -155,6 +155,9 @@ function draw() {
         velocidadOsos=2;
         score=0;
         gameOver=0;
+        for (var i = 0; i < 4; i = i + 1) {
+          misOsos[i].reset();
+        }
       }
     } 
   }  
@@ -381,5 +384,9 @@ function Bear() {
         this.y = random(this.limiteInfY, this.limiteSupY); 
       }
     } 
+  }
+  this.reset = function() {
+    this.x = width;
+  	this.y =this.limiteSupY; 
   }
 }
