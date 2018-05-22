@@ -74,7 +74,8 @@ function setup() {
   //createCanvas(windowWidth, windowHeight);
   createCanvas(2048, 1536);
   
-  velocidadOsos=2;
+  velocidadOsos=1;
+  velocidadOsos=velocidadOsos+conversionX/4;
   gameOver=0;
   score=0;
   pause=0;
@@ -152,7 +153,8 @@ function draw() {
         mouseY > startY && mouseY < startY+altoRect) {
         figuraX=0;
  				figuraY=140*conversionY;
-        velocidadOsos=2;
+        velocidadOsos=1;
+		velocidadOsos=velocidadOsos+conversionX/4;
         score=0;
         gameOver=0;
         for (var i = 0; i < 4; i = i + 1) {
