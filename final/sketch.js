@@ -73,7 +73,7 @@ function setup() {
   music.loop();
   //createCanvas(windowWidth, windowHeight);
   //createCanvas(2048, 1536);
-  createCanvas(1024, 768);
+  createCanvas(1024, 491);
   
   velocidadOsos=1;
   gameOver=0;
@@ -85,7 +85,7 @@ function setup() {
  //conversionX = 2048/600;
  //conversionY = 1538/400;
  conversionX = 1024/600;
- conversionY = 768/400;
+ conversionY = 491/400;
 
  arribaX=80*conversionX;
  arribaY=280*conversionY;
