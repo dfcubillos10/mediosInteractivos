@@ -62,19 +62,18 @@ function preload()
 }
 
 function setup() {
-  createCanvas(windowWidth, windowHeight);
+  //createCanvas(windowWidth, windowHeight);
+  createCanvas(2048, 1536);
   
   velocidadOsos=1;
   gameOver=0;
   score=0;
   pause=0;
   //localizacion botones pantalla
- //conversionX = width/600;
- //conversionY = height/400;
+ conversionX = width/600;
+ conversionY = height/400;
  //conversionX = 1;
  //conversionY = 1;
- conversionX = 1024;
- conversionY = 768;
 
  arribaX=80*conversionX;
  arribaY=280*conversionY;
