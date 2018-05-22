@@ -71,23 +71,18 @@ function preload()
 
 function setup() {
   music.loop();
-  createCanvas(windowWidth, windowHeight);
-  //createCanvas(2048, 1536);
-  createCanvas(1024, 768);
+  //createCanvas(windowWidth, windowHeight);
+  createCanvas(2048, 1536);
   
-  velocidadOsos=20;
+  velocidadOsos=5;
   gameOver=0;
   score=0;
   pause=0;
   //localizacion botones pantalla
- conversionX = windowWidth/600;
- conversionY = windowHeight/400;
  //conversionX = width/600;
  //conversionY = height/400;
- //conversionX = 2048/600;
- //conversionY = 1538/400;
- //conversionX = 1024/600;
- //conversionY = 768/400;
+  conversionX = 2048/600;
+ conversionY = 1538/400;
 
  arribaX=80*conversionX;
  arribaY=280*conversionY;
@@ -123,7 +118,7 @@ function setup() {
  anchoRect=60*conversionX;
 
  selectedColor=0;
- traslacion =200;
+ traslacion =50;
   
   //creacion de especies
   unicornio = new Unicorn();
@@ -157,7 +152,7 @@ function draw() {
         mouseY > startY && mouseY < startY+altoRect) {
         figuraX=0;
  				figuraY=140*conversionY;
-        velocidadOsos=20;
+        velocidadOsos=10;
         score=0;
         gameOver=0;
       }
