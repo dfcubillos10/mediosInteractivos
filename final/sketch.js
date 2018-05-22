@@ -71,21 +71,21 @@ function preload()
 
 function setup() {
   music.loop();
-  //createCanvas(windowWidth, windowHeight);
+  createCanvas(windowWidth, windowHeight);
   //createCanvas(2048, 1536);
-  createCanvas(1024, 491);
+  createCanvas(1024, 768);
   
   velocidadOsos=1;
   gameOver=0;
   score=0;
   pause=0;
   //localizacion botones pantalla
- //conversionX = width/600;
- //conversionY = height/400;
+ conversionX = width/600;
+ conversionY = height/400;
  //conversionX = 2048/600;
  //conversionY = 1538/400;
- conversionX = 1024/600;
- conversionY = 491/400;
+ //conversionX = 1024/600;
+ //conversionY = 768/400;
 
  arribaX=80*conversionX;
  arribaY=280*conversionY;
