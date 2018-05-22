@@ -2,6 +2,11 @@ var velocidadOsos;
 var gameOver;
 var score;
 var pause;
+
+//sonidos
+var music;
+var sound;
+
 //variables imagenes
 var star;
 var unicorn;
@@ -59,10 +64,13 @@ function preload()
   star=loadImage("assets/star.png");
   unicorn=loadImage("assets/unicorn.png");
   bear = loadImage("assets/bear.png");
+  
+  music=loadSound('assets/music.mp3');
+  sound=loadSound('assets/sound.mp3');
 }
 
 function setup() {
-  //createCanvas(windowWidth, windowHeight);
+  music.loop();
   createCanvas(2048, 1536);
   
   velocidadOsos=1;
@@ -70,10 +78,11 @@ function setup() {
   score=0;
   pause=0;
   //localizacion botones pantalla
- conversionX = width/600;
- conversionY = height/400;
- //conversionX = 1;
- //conversionY = 1;
+ //conversionX = width/600;
+ //conversionY = height/400;
+ conversionX = 2048/600;
+ conversionY = 1536/400;
+ 
 
  arribaX=80*conversionX;
  arribaY=280*conversionY;
@@ -101,8 +110,8 @@ function setup() {
 
  figuraX=280*conversionX;
  figuraY=140*conversionY;
- altoFigura=25*conversionX;
- anchoFigura=25*conversionY;
+ altoFigura=25*conversionY;
+ anchoFigura=25*conversionX;
 
  tamCirculo=40*conversionX;
  altoRect=20*conversionY;
@@ -128,6 +137,7 @@ function draw() {
   //si ya se perdió
   if(gameOver)
   {
+    textSize(10*conversionY);
     background(148,0,211);
     fill(250);
     text("GAME OVER, YOUR SCORE: "+score,width/2,height/2);
@@ -140,14 +150,17 @@ function draw() {
     {
       if (mouseX > startX && mouseX < startX + anchoRect &&
         mouseY > startY && mouseY < startY+altoRect) {
-        figuraX=280*conversionX;
+        figuraX=0;
  				figuraY=140*conversionY;
+        velocidadOsos=1;
+        score=0;
         gameOver=0;
       }
     } 
   }  
   else
   {
+    textSize(10*conversionY);
     //si se esta jugando
     background(25);
     if(pause)
@@ -165,7 +178,7 @@ function draw() {
       if (selectedColor == 3) {
           fill(128, 255, 0);
       }
-      text("PAUSE",startX+60*conversionX,selectY-50*conversionY)
+      text("PAUSE",startX+60*conversionX,selectY-15*conversionY)
       
     }
     else
@@ -184,6 +197,7 @@ function draw() {
       //si el unicornio toca un oso pierde
     	if (dist(unicornio.x, unicornio.y, misOsos[i].x, misOsos[i].y) < misOsos[i].tamano)
       {
+        sound.play();
       	gameOver=1;
       }    
     }
@@ -221,7 +235,7 @@ function draw() {
     text("A",aX-2.5*conversionX,aY+2.5*conversionY)
 
     text("Pause",startX+15*conversionX,startY+15*conversionY)
-    text("Continue",selectX+15*conversionX,selectY+15*conversionY)
+    text("Continue",selectX+5*conversionX,selectY+15*conversionY)
 
     line(0, 240*conversionY, width, 240*conversionY);
 
@@ -259,7 +273,7 @@ function draw() {
       }    
       if (mouseX > abajoX-tamCirculo/2 && mouseX < abajoX + tamCirculo/2 &&
         mouseY > abajoY-tamCirculo/2 && mouseY < abajoY + tamCirculo/2) {
-        if(figuraY<240*conversionY-altoFigura*conversionY)
+        if(figuraY<240*conversionY-altoFigura)
         {
           figuraY=figuraY+traslacion;
         }
@@ -327,7 +341,7 @@ function Star() {
   }
 }
 function Unicorn() {
-  this.tamano = altoFigura*conversionX;
+  this.tamano = altoFigura;
   //el gato sale de la mitad inicialmente
   this.x = 0;
   this.y = height/2-this.tamano; 
